@@ -3,7 +3,7 @@
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[]{csquotes}
-\usepackage[style=authoryear-ibid,backend=biber]{biblatex}
+\usepackage[style=authoryear-comp,backend=biber]{biblatex}
 \usepackage{mathptmx}
 \usepackage[T1]{fontenc}
 \usepackage{relsize}
@@ -13,7 +13,7 @@
 
 \addbibresource{sources.bib}
 
-\author{Lars Eppinger, s178121}
+\author{Lars Eppinger}
 \title{Quantifizierung von Code-Qualität mithilfe statischer Code-Analyse}
 \date{1. Juni 2020}
 
@@ -26,13 +26,45 @@
 Code-Qualität ist einer der entscheidenden Faktoren über Sicherheit, Wartbarkeit und Maintainability von Softwareprojekten. 
 Durch neue Ansätze in der Softwareentwicklung, speziell der agilen Softwareentwicklung, ist es immer wichtiger, hohe Qualität in einer Codebasis sicherzustellen, um die Umsetzung neuer Anforderungen so schnell und fehlerfrei wie möglich zu gestalten.
 Immer häufiger kommen für diesen Zweck Tools zur statischen Code-Analyse zum Einsatz.
-In dieser Arbeit wird die Frage geklärt, ob diese Tools geeignet sind, um die Qualität einer Codebasis in objektorientierten Umgebungen zu quantifizieren.
+In dieser Arbeit wird die Frage geklärt, ob diese Tools geeignet sind, um die Qualität einer Codebasis in der objektorientierten Progammierung zu quantifizieren.
 
 \section{Code-Qualität}
 \subsection{Definition}
-\blindtext
+Zunächst ist der Begriff der Code-Qualität zu definieren. 
+Die Merkmale für \enquote{guten} bzw. \enquote{schlechten} Code -- und somit indirekt für Code-Qualität -- zu definieren, ist nicht trivial.
+Dies merkte bereits Robert C. Martin in seinem Werk \enquote{Clean Code} an: \enquote{Was ist sauberer Code? Es gibt wahrscheinlich so viele Definitionen wie Programmierer} \parencites[32]{Martin2009}.
 
-\subsection{Merkmale}
+Martin zitiert zum Thema \enquote{Guter Code} mehrere einflussreiche Programmierer.
+So hebt Bjarne Soustrup, Erfinder der Programmiersprache C++, insbesondere Eleganz und Effizienz als Merkmale hervor \parencites[32]{Martin2009}. Grady Booch, Autor von \enquote{Object-Oriented Analysis and Design with Applications} nennt als Merkmale guten Codes, dass dieser \enquote{einfach und direkt} sein sollte \parencites[34]{Martin2009}. Dave Thomas, Gründer der OTI hingegen legt ein besonderes Augenmerk  auf die Lesbarkeit von Code \parencites[35]{Martin2009}. 
+Hier lassen sich bereits einige Kriterien der Qualität von Code ableiten.
+Eines dieser Kriterien ist die Effizienz, mit der ein gegebenes Problem gelöst wird.
+Jedes Problem hat eine inhärente Grundkomplexität.
+Zusätzlich zu dieser inhärenten Komplexität trägt jede Code-basierte Problemlösung eine eigene Komplexität.
+Effizienter Code hält diese zusätzliche Komplexität so minimal wie möglich.
+Weiter ist die Lesbarkeit -- in anderen Worten die Verständlichkeit -- von Code ein wesenttlicher Aspekt von Code-Qualität.
+Verständlichkeit von Code nimmt großen Einfluss darauf, wie tief ein Entwickler eine Code-Basis in einem gegebenen Zeitrahmen verstehen kann.
+Ist das Verständnis über die Code-Basis zu gering, wächst entweder der Zeitrahmen, da der Entwickler das Verständnis zunächst vertiefen muss, oder die Möglichkeit von Softwarefehlern tut sich auf, da der Entwickler die Auswirkung seiner Änderungen unzulänglich einschätzen kann.
+
+Einer allgemeineren Betrachtung von Metriken des objektorientierten Softwaredesigns nahmen \textcite{Metrics_OO_design} in \enquote{A metrics suite for object oriented design} vor.
+Basierend hierauf wählten \textcite{Linda_softwarequality} fünf Metriken aus, welche sich eignen, um Code-Qualität zu bewerten:
+\begin{itemize}
+    \item Effizienz -- Sind die Konstrukte effizient entworfen?
+    \item Komplexität -- Könnten die Konstrukte effektiver genutzt werden, um architekturelle Komplexität zu reduzieren?
+    \item Verständlichkeit -- Erhöht das Softwaredesign die psychologische Komplexität?
+    \item Wiederverwendbarkeit -- Lässt das Softwaredesign zu, dass Komponenten wiederverwertet werden können?
+    \item Testbarkeit -- Lässt die Struktur einfaches Testing zu?
+\end{itemize}
+Diese Merkmale werden in dieser Arbeit als Definitionskriterien für Code-Qualität übernommen.
+
+\subsection{Effizienz}
+\blindtext
+\subsection{Komplexität}
+\blindtext
+\subsection{Verständlichkeit}
+\blindtext
+\subsection{Wiederverwendbarkeit}
+\blindtext
+\subsection{Testbarkeit}
 \blindtext
 
 \section{Statische Code-Analyse}
@@ -42,7 +74,6 @@ In dieser Arbeit wird die Frage geklärt, ob diese Tools geeignet sind, um die Q
 \section{Problematik}
 \blindtext
 
-bla \parencite{natural-language-processing}
 \newpage
 \printbibliography
 \end{document}
