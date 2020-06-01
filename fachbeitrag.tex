@@ -51,9 +51,9 @@ Je nach verwendeter Programmiersprache können hier starke Variationen bezüglic
 \paragraph{Zyklomatische Komplexität (McCabe-Metrik)}
 Mit der von von Thomas J. McCabe begründeten zyklomatischen Komplexität lässt sich die Komplexität von Code beschreiben. 
 Zyklomatische Komplexität bezieht sich auf Kontroll-Statements, beispielsweise \enquote{if-else} oder \enquote{switch-case}-Statements.
-Die zyklomatische Komplexität ist hierbei definiert als die Anzahl linear unabhängiger Pfade im zu bewertenden Kontrollflussgraphen.
-Sie lässt sich wie folgt berechnen: $M = b + p$, wobei $b$ die Anzahl der Binärverzweigungen und $p$ die Anzahl der Kontrollflussgraphen darstellt.
+Die zyklomatische Komplexität definiert sich wie folgt: $M = b + p$, wobei $b$ die Anzahl der Binärverzweigungen und $p$ die Anzahl der Kontrollflussgraphen darstellt.
 Bei der Betrachtung einer einzelnen Methode ist das $p$ stets 1, da ein Kontrollflussgraph eine Methode beschreibt.
+Bei der Betrachtung einer einzelnen Methode ist die zyklomatische Komplexität somit als Summe der Binärverzweigungen plus eins definiert.
 Eine Binärverzweigung ist eine Verzweigung des Kontrollflusses mit lediglich zwei Entscheidungsmöglichkeiten, etwa ein \enquote{if}-Statement.
 Verzweigungen mit mehreren Entscheidungsmöglichkeiten, etwa ein \enquote{switch-case}-Statement, lassen sich mittels der Formel $b = z - 1$ zu Binärverzweigungen umrechnen,  wobei $z$ die Anzahl der Zweige darstellt \parencite{McCabe_complexity}.
 Diese Metrik ist ausschlaggebend für die Komplexität des Codes.
@@ -61,7 +61,7 @@ Allerdings nimmt die zyklomatische Komplexität ebenfalls Einfluss auf alle ande
 Insbesondere in der Testbarkeit spielt die zyklomatische Komplexität eine bedeutende Rolle.
 Bei einem Unit-Test sollen im Idealfall alle möglichen Fälle einer Methode getestet werden.
 Die Anzahl der Fälle ist hierbei äquivalent zur zyklomatischen Komplexität.
-Daher wächst mit größerer zyklomatischer Komplexität die Anzahl abzudeckender Testfälle, wodurch das Testing erschwert wird.
+Daher wächst mit größerer zyklomatischer Komplexität die Anzahl abzudeckender Testfälle, wodurch das Testing erschwert wird \parencite{Linda_softwarequality}.
 
 \paragraph{Anteil an Kommentaren}
 Kommentare können Entwicklern dabei helfen, geschriebenen Code zu verstehen, da sie komplexe Vorgänge näher erläutern können. 
