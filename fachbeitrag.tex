@@ -115,8 +115,14 @@ LCOM ist wie folgt zu ermitteln:  $LCOM = 1 - R / F$, wobei $R$ die Summe aller 
 Ist die Kohärenz zu niedrig, also die LCOM zu hoch, sollte die untersuchte Klasse so refaktoriert werden, dass sie sich nur mit einem Problem befasst.
 Diese Metrik gibt Aufschluss über Effizienz und Wiederverwendbarkeit (\textcite{Metrics_OO_design}, \textcite{Linda_softwarequality}).
 
-\section{Statische Code-Analyse}
-\subsection{Definition}
+\section{SonarQube}
+
+Diese Arbeit beschäftigt sich mit dem statischen Code-Analyse-Tool SonarQube.
+SonarQube ist eines der am weitesten verbreiteten Tools für statische Code-Analyse und wird vorrangig in der Java-Entwicklung eingesetzt.
+Allerdings lassen sich mit SonarQube auch Code-Basen in anderen Programmiersprachen analysieren \parencite{sonarqube_languages}.
+Die referenzierte Programmversion von SonarQube ist SonarQube 8.3.
+
+\subsection{Statische Code-Analyse}
 Bei der statischen Code-Analyse wird die Code-Basis einer formalen Prüfung in Hinblick auf statische Regeln unterzogen.
 Ein Beispiel für eine solche Prüfung ist etwa das Überprüfen des Codes auf die maximale Zeilenanzahl innerhalb einer Funktion.
 Für eine solche Überprüfung wird eine Regel festgelegt.
@@ -124,12 +130,6 @@ So kann etwa festgelegt werden, dass eine Methode eine maximale Zeilenanzahl von
 Diese Überprüfung wird in der Regel automatisiert durch ein Programm durchgeführt, ein Tool für statische Code-Analyse.
 Bei diesem Testverfahren handelt es sich um ein sog. White-Box-Verfahren, da zur Durchführung des Tests die Codebasis offengelegt werden muss und das Programm nicht als Black-Box behandelt werden kann.
 Statische Code-Analyse unterscheidet sich insofern von Style-Checker, als dass diese nicht nur simple Metriken wie LOC erheben, sondern auch bekannte Programmierfehler erkennen kann, etwa Race Conditions oder Memory Leaks.
-
-\subsection{SonarQube}
-Als Referenz wird in dieser Arbeit das statische Code-Analyse-Tool SonarQube gewählt.
-SonarQube ist eines der am weitesten verbreiteten Tools für statische Code-Analyse und wird vorrangig in der Java-Entwicklung eingesetzt.
-Allerdings lassen sich mit SonarQube auch Code-Basen in anderen Programmiersprachen analysieren \parencite{sonarqube_languages}.
-Die referenzierte Programmversion von SonarQube ist SonarQube 8.3.
 
 \subsection{Erhobene Metriken}
 
